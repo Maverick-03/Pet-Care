@@ -1,0 +1,17 @@
+{
+    "pet": {
+            "name": "Dog",
+            "description": "Golden retriever"
+        },
+    "actions":
+        [
+            { "title": "Add Log" }, { "title": "Check Symptoms" }, { "title": "Find vet" }, { "title": "Reminders" }
+            
+        ],
+    "recents":
+        [
+            { "activityTitle": "visited Vet" }, { "activityTitle": "Vaccination Done" }, { "activityTitle": "Groomed" }
+            
+        ]
+        
+}
