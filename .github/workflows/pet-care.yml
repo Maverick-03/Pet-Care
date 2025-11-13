@@ -14,7 +14,6 @@ jobs:
       
       - name: Install dependencies
         run: |
-          brew install ruby
           gem install bundler fastlane -NV
           bundle install || true
 
