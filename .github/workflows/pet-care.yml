@@ -17,7 +17,6 @@ jobs:
           brew install ruby
           gem install bundler fastlane -NV
           bundle install || true
-          pod install
 
       - name: Set up environment
         env:
