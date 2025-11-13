@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8B78B8622EC4AAC400D92D95 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8B78B85F2EC4AAC400D92D95 /* README.md */; };
+		8B78B8632EC4AAC400D92D95 /* Appfile in Resources */ = {isa = PBXBuildFile; fileRef = 8B78B85D2EC4AAC400D92D95 /* Appfile */; };
+		8B78B8642EC4AAC400D92D95 /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 8B78B85E2EC4AAC400D92D95 /* Fastfile */; };
+		8B78B8652EC4AAC400D92D95 /* report.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8B78B8602EC4AAC400D92D95 /* report.xml */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8B04D5F02E6C2B7900B161A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +34,10 @@
 		8B04D5DF2E6C2B7700B161A9 /* Pet Care.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pet Care.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B04D5EF2E6C2B7900B161A9 /* Pet CareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pet CareTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B04D5F92E6C2B7900B161A9 /* Pet CareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pet CareUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B78B85D2EC4AAC400D92D95 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
+		8B78B85E2EC4AAC400D92D95 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
+		8B78B85F2EC4AAC400D92D95 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B78B8602EC4AAC400D92D95 /* report.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = report.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +86,7 @@
 		8B04D5D62E6C2B7700B161A9 = {
 			isa = PBXGroup;
 			children = (
+				8B78B8612EC4AAC400D92D95 /* fastlane */,
 				8B04D5E12E6C2B7700B161A9 /* Pet Care */,
 				8B04D5F22E6C2B7900B161A9 /* Pet CareTests */,
 				8B04D5FC2E6C2B7900B161A9 /* Pet CareUITests */,
@@ -90,6 +102,17 @@
 				8B04D5F92E6C2B7900B161A9 /* Pet CareUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8B78B8612EC4AAC400D92D95 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				8B78B85D2EC4AAC400D92D95 /* Appfile */,
+				8B78B85E2EC4AAC400D92D95 /* Fastfile */,
+				8B78B85F2EC4AAC400D92D95 /* README.md */,
+				8B78B8602EC4AAC400D92D95 /* report.xml */,
+			);
+			path = fastlane;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +235,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B78B8622EC4AAC400D92D95 /* README.md in Resources */,
+				8B78B8632EC4AAC400D92D95 /* Appfile in Resources */,
+				8B78B8642EC4AAC400D92D95 /* Fastfile in Resources */,
+				8B78B8652EC4AAC400D92D95 /* report.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +435,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Me.Pet-Care";
+				PRODUCT_BUNDLE_IDENTIFIER = com.me.petcareapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -436,7 +463,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Me.Pet-Care";
+				PRODUCT_BUNDLE_IDENTIFIER = com.me.petcareapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
