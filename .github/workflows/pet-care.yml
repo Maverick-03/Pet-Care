@@ -12,16 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Set up Ruby 2.6.10
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.6.10
-      
       - name: Install dependencies
         run: |
-         gem uninstall bundler -aIx || true
-         gem install bundler fastlane -NV
-         bundle install 
+          brew install ruby
+          gem install bundler fastlane -NV
+          bundle install
 
       - name: Set up environment
         env:
