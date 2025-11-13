@@ -1,13 +1,30 @@
-name: Pet Care
+name: Pet Care Fastlane
+
 on:
   push:
-    branches:
-      - 'master'
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 jobs:
   build:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: fastlane beta
+      - uses: actions/checkout@v4
+      
+      - name: Install dependencies
+        run: |
+          brew install ruby
+          gem install bundler fastlane -NV
+          bundle install || true
+
+      - name: Set up environment
         env:
+          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+          FASTLANE_TEAM_ID: ${{ secrets.FASTLANE_TEAM_ID }}
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+          APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+        run: echo "Environment ready"
+
+      - name: Build and Deploy to TestFlight
+        run: bundle exec fastlane beta
